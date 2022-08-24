@@ -1,0 +1,48 @@
+name: hack_roms
+description: A new Flutter project.
+
+publish_to: 'none'
+
+
+version: 1.0.0+1
+
+environment:
+  sdk: ">=2.17.6 <3.0.0"
+
+dependencies:
+  flutter:
+    sdk: flutter
+
+
+  cupertino_icons: ^1.0.2
+  animated_background: ^2.0.0
+  url_launcher: ^6.1.5
+  open_file: ^3.2.1
+
+
+dev_dependencies:
+  flutter_launcher_icons: ^0.10.0
+  flutter_test:
+    sdk: flutter
+
+  flutter_lints: ^2.0.0
+
+flutter_icons:
+  android: "launcher_icon"
+  image_path: "assets/images/appicon.png"
+  min_sdk_android: 19
+
+
+flutter:
+
+  uses-material-design: true
+
+  assets:
+    - assets/
+    - assets/MYBOY.apk
+    - assets/images/download.png
+    - assets/images/pokeball.png
+    - assets/images/sleeping.png
+    - assets/images/square.png
+    - assets/images/triangle.png
+    - assets/images/console.png
