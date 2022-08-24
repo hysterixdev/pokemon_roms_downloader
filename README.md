@@ -1,5 +1,6 @@
 # Pokemon_Roms_Downloader
 This App Is Made To Provide Download Links For Popular Roms Of Pokemon For GBA EMULATOR, Feel Free To Add More Roms
+Directly download the `app-release.apk` to install on android devices (android 8.1+)
 
 This App is Build In FLutter 
 you can build your app according to your device
