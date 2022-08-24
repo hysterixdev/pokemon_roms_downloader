@@ -1,16 +1,17 @@
-# hack_roms
+# Pokemon_Roms_Downloader
+This App Is Made To Provide Download Links For Popular Roms Of Pokemon For GBA EMULATOR, Feel Free To Add More Roms
 
-A new Flutter project.
+This App is Build In FLutter 
+you can build your app according to your device
+using various tags such as
+### flutter config --enable-linux-desktop
+### flutter config --enable-ios
+### flutter config --enable-web
 
-## Getting Started
+*** 
 
-This project is a starting point for a Flutter application.
-
-A few resources to get you started if this is your first Flutter project:
-
-- [Lab: Write your first Flutter app](https://docs.flutter.dev/get-started/codelab)
-- [Cookbook: Useful Flutter samples](https://docs.flutter.dev/cookbook)
-
-For help getting started with Flutter development, view the
-[online documentation](https://docs.flutter.dev/), which offers tutorials,
-samples, guidance on mobile development, and a full API reference.
+# To Run The Games
+1. Go to your Downloads folder or wherever the file is downloaded
+2. unzip the file
+3. open the File in any GBA emulator
+4. OR you can Directly install the myBoy GBA emulator for android which is provided directly in the home screen of the app
