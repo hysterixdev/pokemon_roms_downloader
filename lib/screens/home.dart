@@ -98,7 +98,7 @@ class HomeState extends State<Home> with TickerProviderStateMixin {
             ),
             GestureDetector(
               onTap: () {
-                _launchUrl(link: 'https://spaces.apkmody.io/v2/download/xmR0');
+                _launchUrl(link: 'https://m.apkhere.com/down/com.fastemulator.gba_1.8.0_paid');
               },
               child: Container(
                 height: 240,
