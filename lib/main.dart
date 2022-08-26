@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:hack_roms/screens/fire_red.dart';
 import 'screens/home.dart';
 import 'screens/downloads.dart';
 import 'screens/categories.dart';
@@ -10,9 +11,10 @@ void main() async {
       debugShowCheckedModeBanner: false,
       initialRoute: '/',
       routes: {
-        '/': (context) => Home(),
-        '/categories': (context) => Categories(),
-        '/downloads': (context) => Downloads(),
+        '/': (context) => const Home(),
+        '/categories': (context) => const Categories(),
+        '/categories/Kanto': (context) => const FireRed(),
+        '/downloads': (context) => const Downloads(),
       },
     ));
 }

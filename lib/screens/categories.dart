@@ -1,6 +1,8 @@
 import 'package:flutter/material.dart';
+import 'package:hack_roms/res/assets_res.dart';
 import 'package:hack_roms/shared/animated_bg.dart';
-import 'package:hack_roms/shared/roms_list.dart';
+import 'package:hack_roms/shared/category_button.dart';
+import 'package:hack_roms/shared/custom_app_bar.dart';
 
 import 'fire_red.dart';
 
@@ -12,19 +14,61 @@ class Categories extends StatefulWidget {
 }
 
 class _CategoriesState extends State<Categories> {
-
   @override
   Widget build(BuildContext context) {
     return Scaffold(
-      appBar: AppBar(
-        centerTitle: true,
-        title: const Text('Fire Red Hacks'),
-        elevation: 0.0,
-      ),
+      appBar: const CustomBar(title: 'Categories', centerTitle: true)
+          .build(context),
       body: Stack(
         children: [
           Container(color: const Color(0x810055FF), child: const AnimBG()),
-          const FireRed(),
+          Column(
+            children: [
+              SizedBox(height: 32.0,),
+              Row(
+                mainAxisAlignment: MainAxisAlignment.spaceEvenly,
+                children: const [
+                  CustomContainer(
+                    imagePath: AssetsRes.POKEBALL,
+                    regionName: 'Kanto',
+                  ),
+                  CustomContainer(
+                    imagePath: AssetsRes.POKEBALL,
+                    regionName: 'Johto',
+                  ),
+                ],
+              ),
+              Flexible(child: Container()),
+              Row(
+                mainAxisAlignment: MainAxisAlignment.spaceEvenly,
+                children: const [
+                  CustomContainer(
+                    imagePath: AssetsRes.POKEBALL,
+                    regionName: 'Hoenn',
+                  ),
+                  CustomContainer(
+                    imagePath: AssetsRes.POKEBALL,
+                    regionName: 'Sinnoh',
+                  ),
+                ],
+              ),
+              Flexible(child: Container()),
+              Row(
+                mainAxisAlignment: MainAxisAlignment.spaceEvenly,
+                children: const [
+                  CustomContainer(
+                    imagePath: AssetsRes.POKEBALL,
+                    regionName: 'Unova',
+                  ),
+                  CustomContainer(
+                    imagePath: AssetsRes.POKEBALL,
+                    regionName: 'Kanto',
+                  ),
+                ],
+              ),
+              Flexible(child: Container()),
+            ],
+          )
         ],
       ),
     );

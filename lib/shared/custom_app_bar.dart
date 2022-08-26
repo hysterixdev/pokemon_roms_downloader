@@ -2,17 +2,21 @@ import 'package:flutter/material.dart';
 import 'package:flutter/services.dart';
 
 class CustomBar extends StatelessWidget {
-
   final String title;
-  const CustomBar({Key? key, required this.title, required this.centerTitle}) : super(key: key);
-  final Color backGround = const Color(0x810055FF);
   final bool centerTitle;
+  final Color backGround = const Color(0x810055FF);
+
+  const CustomBar({Key? key, required this.title, required this.centerTitle})
+      : super(key: key);
+
   @override
   PreferredSizeWidget build(BuildContext context) {
     return AppBar(
       systemOverlayStyle: SystemUiOverlayStyle(
         statusBarColor: backGround,
       ),
+      leading: Lead(leading: centerTitle),
+      leadingWidth: centerTitle ? 30.0 : 0.0,
       elevation: 0.0,
       backgroundColor: backGround,
       title: Text(
@@ -41,3 +45,24 @@ class CustomBar extends StatelessWidget {
   }
 }
 
+class Lead extends StatelessWidget {
+  final bool leading;
+
+  const Lead({Key? key, required this.leading}) : super(key: key);
+
+  @override
+  Widget build(BuildContext context) {
+    if (leading == true) {
+      return IconButton(
+        onPressed: () {
+          Navigator.pop(context);
+        },
+        icon: const Icon(Icons.arrow_back_ios),
+        color: Colors.black87,
+        padding: const EdgeInsets.symmetric(horizontal: 15.0),
+      );
+    } else {
+      return const SizedBox(height: 0.0, width: 0.0);
+    }
+  }
+}

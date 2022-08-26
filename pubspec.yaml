@@ -39,7 +39,6 @@ flutter:
 
   assets:
     - assets/
-    - assets/MYBOY.apk
     - assets/images/download.png
     - assets/images/pokeball.png
     - assets/images/sleeping.png

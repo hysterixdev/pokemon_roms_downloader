@@ -10,5 +10,4 @@ class AssetsRes {
   static const String TRIANGLE  =  'assets/images/triangle.png';
   static const String CONSOLE   =  'assets/images/console.png';
   static const String APPICON   =  'assets/images/appicon.png';
-  static const String MYBOY     =  'assets/MYBOY.apk';
 }

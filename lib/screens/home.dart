@@ -1,4 +1,3 @@
-import 'package:open_file/open_file.dart';
 import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
 import 'package:hack_roms/res/assets_res.dart';

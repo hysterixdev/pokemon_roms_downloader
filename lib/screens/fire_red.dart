@@ -1,4 +1,6 @@
 import 'package:flutter/material.dart';
+import 'package:hack_roms/shared/animated_bg.dart';
+import 'package:hack_roms/shared/custom_app_bar.dart';
 
 import 'package:hack_roms/shared/roms_list.dart';
 import 'package:url_launcher/url_launcher.dart';
@@ -62,37 +64,45 @@ class _FireRedState extends State<FireRed> {
 
   @override
   Widget build(BuildContext context) {
-    return ListView(
-      children: fireRedRoms
-          .map((rom) => Column( crossAxisAlignment: CrossAxisAlignment.stretch,
-            children: [
-              TextButton(
-                onPressed: () {
-                  _launchUrl(link: rom.link);
-                },
-                child: Column( crossAxisAlignment: CrossAxisAlignment.stretch,
+    return Scaffold(
+      appBar: const CustomBar(title: 'Fire Red / Kanto', centerTitle: true).build(context),
+      body: Stack(
+        children: [
+          Container(color: const Color(0x810055FF),child: const AnimBG()),
+          ListView(
+            children: fireRedRoms
+                .map((rom) => Column( crossAxisAlignment: CrossAxisAlignment.stretch,
                   children: [
-                    Card(
-                      color: const Color.fromARGB(200, 250, 150, 100),
-                      child: Padding(
-                        padding: const EdgeInsets.fromLTRB(12.0, 12.0, 12.0, 8.0),
-                        child: Text(
-                          rom.name,
-                          style: const TextStyle(
-                            color: Colors.blueGrey,
-                            fontSize: 22.0,
-                            fontWeight: FontWeight.bold,
-                            letterSpacing: 1.5,
+                    TextButton(
+                      onPressed: () {
+                        _launchUrl(link: rom.link);
+                      },
+                      child: Column( crossAxisAlignment: CrossAxisAlignment.stretch,
+                        children: [
+                          Card(
+                            color: const Color.fromARGB(200, 250, 150, 100),
+                            child: Padding(
+                              padding: const EdgeInsets.fromLTRB(12.0, 12.0, 12.0, 8.0),
+                              child: Text(
+                                rom.name,
+                                style: const TextStyle(
+                                  color: Colors.blueGrey,
+                                  fontSize: 22.0,
+                                  fontWeight: FontWeight.bold,
+                                  letterSpacing: 1.5,
+                                ),
+                              ),
+                            ),
                           ),
-                        ),
+                        ],
                       ),
                     ),
                   ],
-                ),
-              ),
-            ],
-          ))
-          .toList(),
+                ))
+                .toList(),
+          ),
+        ],
+      ),
     );
   }
 }
