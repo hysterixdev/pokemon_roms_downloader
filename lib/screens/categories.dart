@@ -4,7 +4,6 @@ import 'package:hack_roms/shared/animated_bg.dart';
 import 'package:hack_roms/shared/category_button.dart';
 import 'package:hack_roms/shared/custom_app_bar.dart';
 
-import 'fire_red.dart';
 
 class Categories extends StatefulWidget {
   const Categories({Key? key}) : super(key: key);
@@ -17,14 +16,16 @@ class _CategoriesState extends State<Categories> {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
-      appBar: const CustomBar(title: 'Categories', centerTitle: true)
+      appBar: const CustomBar(title: 'Select By Region', centerTitle: true)
           .build(context),
       body: Stack(
         children: [
           Container(color: const Color(0x810055FF), child: const AnimBG()),
           Column(
             children: [
-              SizedBox(height: 32.0,),
+              const SizedBox(
+                height: 32.0,
+              ),
               Row(
                 mainAxisAlignment: MainAxisAlignment.spaceEvenly,
                 children: const [
@@ -59,10 +60,6 @@ class _CategoriesState extends State<Categories> {
                   CustomContainer(
                     imagePath: AssetsRes.POKEBALL,
                     regionName: 'Unova',
-                  ),
-                  CustomContainer(
-                    imagePath: AssetsRes.POKEBALL,
-                    regionName: 'Kanto',
                   ),
                 ],
               ),

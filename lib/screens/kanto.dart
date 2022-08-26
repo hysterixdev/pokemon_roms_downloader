@@ -1,7 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:hack_roms/shared/animated_bg.dart';
 import 'package:hack_roms/shared/custom_app_bar.dart';
-
 import 'package:hack_roms/shared/roms_list.dart';
 import 'package:url_launcher/url_launcher.dart';
 import 'package:url_launcher/url_launcher_string.dart';
