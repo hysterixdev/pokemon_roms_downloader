@@ -4,6 +4,7 @@ import 'package:flutter/material.dart';
 import 'package:hack_roms/res/assets_res.dart';
 import 'package:hack_roms/shared/animated_bg.dart';
 import 'package:hack_roms/shared/custom_app_bar.dart';
+import 'package:url_launcher/url_launcher_string.dart';
 
 class Home extends StatefulWidget {
   const Home({Key? key}) : super(key: key);
@@ -13,6 +14,11 @@ class Home extends StatefulWidget {
 }
 
 class HomeState extends State<Home> with TickerProviderStateMixin {
+
+  _launchUrl({required link}) async {
+    await launchUrlString(link, mode: LaunchMode.externalApplication);
+  }
+  
   Color backGround = const Color(0x810055FF);
 
   @override
@@ -92,7 +98,7 @@ class HomeState extends State<Home> with TickerProviderStateMixin {
             ),
             GestureDetector(
               onTap: () {
-                OpenFile.open(AssetsRes.MYBOY);
+                _launchUrl(link: 'https://m.apkhere.com/down/com.fastemulator.gba_1.8.0_paid');
               },
               child: Container(
                 height: 240,
