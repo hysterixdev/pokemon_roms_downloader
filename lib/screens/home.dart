@@ -96,9 +96,6 @@ class HomeState extends State<Home> with TickerProviderStateMixin {
               child: Container(),
             ),
             GestureDetector(
-              onTap: () {
-                _launchUrl(link: 'https://m.apkhere.com/down/com.fastemulator.gba_1.8.0_paid');
-              },
               child: Container(
                 height: 240,
                 width: 240,
@@ -135,6 +132,9 @@ class HomeState extends State<Home> with TickerProviderStateMixin {
                   ],
                 ),
               ),
+              onTap: () {
+                _launchUrl(link: 'https://files.moddroid.co/My%20Boy/My_Boy_v.1.8.0_Mod_arm-Lirico.apk');
+              },
             ),
             Expanded(
               flex: 3,
